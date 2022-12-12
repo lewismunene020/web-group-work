@@ -1,0 +1,78 @@
+:root{
+    --color-white: #fff;
+    --color-overlay: rgba(0, 0, 0, 0.5);
+    --box-shadow: 0 0 3rem rgba(0, 0, 0, 0.3) ;
+    --card-border-radius: 0.5rem;
+    --card-padding: 1.5rem;
+    --color-primary: #ff6b6b;
+}
+.app-popup{
+    background: var(--color-overlay);
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    z-index:100;
+    place-items: center;
+    font-size: 1.1rem;
+    display: none;
+ }
+
+ .app-popup.active{
+   position: fixed;
+    display: grid;
+ }
+
+ .app-popup.splash{
+   z-index: 1001;
+   background: var(--color-white);
+ }
+
+   .app-popup.splash .container{
+      top: 50%;
+      left: 50%;
+      transform:translate(-50% , -50%);
+   }
+ .app-popup .container{
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    top:calc(var(--sticky-top)  - 5rem);
+    left:auto;
+    width: 42%;
+    min-width: 320px;
+    max-width: 100%;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.3) ;
+}
+
+.app-popup .container.center{
+   top: 50%;
+   left: 50%;
+   transform:translate(-50% , -50%);
+}
+
+
+.btn{
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    
+}
+
+.btn-primary{
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+
+
+
+
